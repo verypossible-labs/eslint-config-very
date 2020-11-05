@@ -9,12 +9,6 @@ end_of_line = lf
 insert_final_newline = true
 charset = utf-8
 
-# language-specific formatting
-# eg:
-# [*.py]
-# indent_style = space
-# indent_size = 4
-#
-# for multiple languages:
-# [*.{ts,js}]
-# indent_size = 2
+[*.{js,json}]
+indent_style = space
+indent_size = 2
