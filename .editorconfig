@@ -1,0 +1,20 @@
+# https://editorconfig.org
+
+# top-most editorconfig file
+root = true
+
+# unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8
+
+# language-specific formatting
+# eg:
+# [*.py]
+# indent_style = space
+# indent_size = 4
+#
+# for multiple languages:
+# [*.{ts,js}]
+# indent_size = 2
