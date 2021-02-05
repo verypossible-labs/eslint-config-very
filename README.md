@@ -11,7 +11,7 @@ Follow these steps to add this eslint config to your project.
 ### Installation
 
 1. Install packages - `yarn add --dev @verypossible/eslint-config`
-2. Install peer dependencies (packages required to use the eslint config) - `npx install-peerdeps --dev @verypossible/eslint-config`
+2. Install peer dependencies - `yarn add --dev @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint prettier`
 
 ### Configuration
 
@@ -24,7 +24,7 @@ This config has 3 setups: node, web, and native. At minimum, this config assumes
 ```js
 // .eslintrc.js
 module.exports = {
-  extends: ["@verypossible/node"],
+  extends: ["@verypossible/eslint-config/node"],
 };
 ```
 
@@ -33,7 +33,7 @@ module.exports = {
 ```js
 // .eslintrc.js
 module.exports = {
-  extends: ["@verypossible/web"],
+  extends: ["@verypossible/eslint-config/web"],
 };
 ```
 
@@ -42,7 +42,7 @@ module.exports = {
 ```js
 // .eslintrc.js
 module.exports = {
-  extends: ["@verypossible/native"],
+  extends: ["@verypossible/eslint-config/native"],
 };
 ```
 
@@ -59,6 +59,45 @@ You can then configure the `lint` script in `package.json`
 ```
 
 You can fix all automatically fixable errors by appending the `--fix` flag to your script: `yarn run lint --fix`.
+
+### Extending the config
+
+You can extend the config in any way that you'd like, including overriding rules.
+
+ex.
+
+```js
+module.exports = {
+  extends: ["@verypossible/eslint-config/native"],
+  rules: {
+    "@typescript-eslint/ban-ts-comment": "warn",
+    "import/namespace": "off",
+  },
+};
+```
+
+### Module resolution
+
+If you're using absolute path resolution aliasing (ie. instead of `../../foo` you have something like `~/foo`) and want to enforce it in import ordering, you can extend the config:
+
+```js
+module.exports = {
+  extends: ["@verypossible/config/[config]"],
+  rules: {
+    "import/order": [
+      "error",
+      {
+        pathGroups: [
+          {
+            pattern: "~/**", // or whatever your alias is
+            group: "parent",
+          },
+        ],
+      },
+    ],
+  },
+};
+```
 
 ## Development
 
@@ -86,3 +125,7 @@ Contributions are welcome! Any contributions you make are greatly appreciated. P
 ## License
 
 Distributed under the [MIT license](https://github.com/verypossible-labs/eslint-config-very/blob/master/LICENSE)
+
+```
+
+```

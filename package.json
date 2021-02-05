@@ -1,6 +1,6 @@
 {
   "name": "@verypossible/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "files": [
     ".eslintrc.js",
@@ -19,6 +19,9 @@
     "url": "https://github.com/verypossible-labs/eslint-config-very/issues"
   },
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "lint": "eslint lib/*.js --fix"
   },
