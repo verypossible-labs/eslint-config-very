@@ -1,7 +1,15 @@
 {
-  "name": "eslint-config-very",
+  "name": "@verypossible/eslint-config",
   "version": "1.0.0",
   "main": "index.js",
+  "files": [
+    ".eslintrc.js",
+    "index.js",
+    "native.js",
+    "node.js",
+    "web.js",
+    "lib"
+  ],
   "author": "Sara Pope <sara@verypossible.com>",
   "repository": {
     "type": "git",
@@ -11,7 +19,13 @@
     "url": "https://github.com/verypossible-labs/eslint-config-very/issues"
   },
   "license": "MIT",
+  "scripts": {
+    "lint": "eslint lib/*.js --fix"
+  },
   "dependencies": {
+    "@babel/eslint-parser": "^7.12.1",
+    "@babel/eslint-plugin": "^7.12.1",
+    "@react-native-community/eslint-plugin": "^1.1.0",
     "@typescript-eslint/eslint-plugin": "^4.6.1",
     "@typescript-eslint/parser": "^4.6.1",
     "eslint": "^7.12.1",
@@ -19,16 +33,20 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.5",
-    "eslint-plugin-react-hooks": "^4.2.0"
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-react-native": "^3.10.0",
+    "prettier": "^2.2.1"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.6.1",
-    "@typescript-eslint/parser": "^4.6.1",
-    "eslint": "^7.12.1",
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.21.5",
-    "eslint-plugin-react-hooks": "^4.2.0"
+    "@babel/core": ">= 7.11.0",
+    "@typescript-eslint/eslint-plugin": ">= 4.6.0",
+    "@typescript-eslint/parser": ">= 4.6.0",
+    "eslint": ">= 6.0.0",
+    "prettier": ">= 1.19.0"
+  },
+  "peerDependenciesMeta": {
+    "@babel/core": {
+      "optional": true
+    }
   }
 }

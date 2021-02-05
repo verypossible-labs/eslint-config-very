@@ -1,29 +1,83 @@
-# eslint-config-very
+# @verypossible/eslint-config
 
-Basic eslint config for TypeScript React / React Native projects.
+Basic eslint config with options for TypeScript and/or React.
 
-## Usage
+**Note: The `web` config is not working with create-react-app -- see [this issue](https://github.com/facebook/create-react-app/issues/8936)**
 
-Follow these steps to add this eslint config to your project. These instructions work for React (create-react-app or custom setups) and React Native (including expo).
+## Getting Started
+
+Follow these steps to add this eslint config to your project.
 
 ### Installation
 
-1. Install packages - `yarn add --dev eslint-config-very`
-2. Install peer dependencies (packages required to use the eslint config) - `npx install-peerdeps --dev eslint-config-very`
-3. Add `extends: [very]` to your `.eslintrc.js`
-4. Configure the `lint` script in `package.json`
+1. Install packages - `yarn add --dev @verypossible/eslint-config`
+2. Install peer dependencies (packages required to use the eslint config) - `npx install-peerdeps --dev @verypossible/eslint-config`
+
+### Configuration
+
+Create an `.eslintrc.js` in the root of your project.
+
+This config has 3 setups: node, web, and native. At minimum, this config assumes all projects are using es6 or higher and contain a `package.json` (for file resolution).
+
+**Node**
+
+```js
+// .eslintrc.js
+module.exports = {
+  extends: ["@verypossible/node"],
+};
+```
+
+**Web (React)**
+
+```js
+// .eslintrc.js
+module.exports = {
+  extends: ["@verypossible/web"],
+};
+```
+
+**Native (React Native)**
+
+```js
+// .eslintrc.js
+module.exports = {
+  extends: ["@verypossible/native"],
+};
+```
+
+In addition to extending the config, you can also add any other [valid eslint params](https://eslint.org/docs/user-guide/configuring) that may be useful for your project.
+
+You can then configure the `lint` script in `package.json`
 
 ```
+
 "scripts": {
-  "lint": "eslint . --ext .ts,.tsx"
+"lint": "eslint . --ext .ts,.tsx"
 }
+
 ```
 
 You can fix all automatically fixable errors by appending the `--fix` flag to your script: `yarn run lint --fix`.
 
+## Development
+
+This config extends these configs and plugins:
+
+- [eslint - recommended](https://eslint.org/docs/rules/)
+- [@typescript-eslint - recommended](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#supported-rules)
+- [react - recommended](https://github.com/yannickcr/eslint-plugin-react)
+- [react-hooks - recommended](https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks)
+- [import - recommended](https://github.com/benmosher/eslint-plugin-import)
+- [prettier](https://github.com/prettier/eslint-config-prettier)
+
+There are a few individual rules configured for each, please check the `lib/` folder for more information.
+
+Adding or changing a rule is allowed! Please feel free to [open an issue](https://github.com/verypossible-labs/eslint-config-very/issues) or a [pull request](https://github.com/verypossible-labs/eslint-config-very/pulls)
+
 ## Roadmap
 
-Please see the [open issues](https://github.com/[VERY-LABS]/[REPO-NAME]/issues) for a list of known issues / proposed features.
+Please see the [open issues](https://github.com/verypossible-labs/eslint-config-very/issues) for a list of known issues / proposed features.
 
 ## Contributing
 
