@@ -15,10 +15,16 @@ Follow these steps to add this eslint config to your project.
 yarn add --dev @typescript-eslint/parser @typescript-eslint/plugin eslint eslint-config-prettier eslint-plugin-import eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
 ```
 
-If you're using React, be sure to also install those dependencies
+If you're using React, be sure to also install these dependencies:
 
 ```bash
 yarn add --dev eslint-plugin-react eslint-plugin-react-hooks
+```
+
+If you want to use aliases for path resolution (see [Module Resolution](#module-resolution)), be sure to also install these dependencies:
+
+```bash
+yarn add --dev eslint-import-resolver-typescript babel-plugin-module-resolver
 ```
 
 ### Configuration
