@@ -1,26 +1,16 @@
 ## [1.1.1](https://github.com/verypossible-labs/eslint-config-very/compare/v1.1.0...v1.1.1) (2021-06-04)
 
-
 ### Bug Fixes
 
-* **extensions:** extract extensions into their own file ([57c9513](https://github.com/verypossible-labs/eslint-config-very/commit/57c9513f568ef7f97602c518e8714c7e20ac9849))
-* **extensions:** extract file extensions ([131373d](https://github.com/verypossible-labs/eslint-config-very/commit/131373d3a0885348cbf199dbde9846023397514e))
-* **typescript:** update extends rule import ([9c8f6ca](https://github.com/verypossible-labs/eslint-config-very/commit/9c8f6ca7933c8d937ab6b2a05d59d6da6a483777))
-
-## [1.1.1](https://github.com/verypossible-labs/eslint-config-very/compare/v1.1.0...v1.1.1) (2021-06-04)
-
-
-### Bug Fixes
-
-* **extensions:** extract extensions into their own file ([57c9513](https://github.com/verypossible-labs/eslint-config-very/commit/57c9513f568ef7f97602c518e8714c7e20ac9849))
-* **typescript:** update extends rule import ([9c8f6ca](https://github.com/verypossible-labs/eslint-config-very/commit/9c8f6ca7933c8d937ab6b2a05d59d6da6a483777))
+- **extensions:** extract extensions into their own file ([57c9513](https://github.com/verypossible-labs/eslint-config-very/commit/57c9513f568ef7f97602c518e8714c7e20ac9849))
+- **extensions:** extract file extensions ([131373d](https://github.com/verypossible-labs/eslint-config-very/commit/131373d3a0885348cbf199dbde9846023397514e))
+- **typescript:** update extends rule import ([9c8f6ca](https://github.com/verypossible-labs/eslint-config-very/commit/9c8f6ca7933c8d937ab6b2a05d59d6da6a483777))
 
 # [1.1.0](https://github.com/verypossible-labs/eslint-config-very/compare/v1.0.2...v1.1.0) (2021-06-04)
 
-
 ### Features
 
-* **lint:** refactor lint configs and update libraries ([37c0cd7](https://github.com/verypossible-labs/eslint-config-very/commit/37c0cd7f8439956183f0b26fc1e1034eb64c26f1))
+- **lint:** refactor lint configs and update libraries ([37c0cd7](https://github.com/verypossible-labs/eslint-config-very/commit/37c0cd7f8439956183f0b26fc1e1034eb64c26f1))
 
 # Changelog
 
