@@ -12,8 +12,12 @@ module.exports = {
      * To override them, you can play an `overrides` field in your config file
      * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#parseroptionsproject
      */
-    tsconfigRootDir: __dirname,
+    tsconfigRootDir: process.cwd(), // project root
     project: ["tsconfig.json"],
   },
-  extends: ["./lib/core.js", "./lib/import.js", "./lib/format.js"],
+  extends: [
+    "./lib/rules/core.js",
+    "./lib/rules/import.js",
+    "./lib/rules/format.js",
+  ],
 };

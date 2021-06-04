@@ -6,5 +6,5 @@ module.exports = {
       jsx: true,
     },
   },
-  extends: ["./index.js", "./react.js"],
+  extends: ["./index.js", "./lib/rules/react.js"],
 };
