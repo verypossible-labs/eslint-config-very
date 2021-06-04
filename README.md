@@ -27,7 +27,7 @@ Create an `.eslintrc.js` in the root of your project.
 
 This config can be used with TypeScript, with or without React. At minimum, this config assumes all projects are using es6 or higher and contain a `package.json` (for file resolution).
 
-**TypeScript**
+#### TypeScript
 
 ```js
 // .eslintrc.js
@@ -36,7 +36,7 @@ module.exports = {
 };
 ```
 
-**TypeScript w/ React**
+#### TypeScript w/ React
 
 ```js
 // .eslintrc.js
@@ -49,15 +49,19 @@ In addition to extending the config, you can also add any other [valid eslint pa
 
 You can then configure the `lint` script in `package.json`
 
-```
-
+```json
 "scripts": {
-"lint": "eslint . --ext .ts,.tsx"
+  "lint": "eslint . --ext .ts,.tsx"
 }
-
 ```
 
-You can fix all automatically fixable errors by appending the `--fix` flag to your script: `yarn run lint --fix`.
+You can fix all automatically fixable errors by adding the `--fix` flag to your script
+
+```json
+"scripts": {
+  "lint": "eslint --fix . --ext .ts,.tsx"
+}
+```
 
 ### Type checking
 
@@ -128,7 +132,3 @@ Contributions are welcome! Any contributions you make are greatly appreciated. P
 ## License
 
 Distributed under the [MIT license](https://github.com/verypossible-labs/eslint-config-very/blob/master/LICENSE)
-
-```
-
-```
