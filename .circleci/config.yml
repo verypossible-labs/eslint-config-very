@@ -7,8 +7,7 @@ jobs:
     environment:
       - PATH: "~/bin:/opt/yarn/yarn-v1.5.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
     steps:
-      - attach_workspace:
-          at: .
+      - checkout
 
       - restore_cache:
           key: yarn-cache-{{ arch }}-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}-{{ .Environment.CACHE_VERSION }}
@@ -35,10 +34,9 @@ jobs:
 workflows:
   deploy:
     jobs:
-      - checkout
       - publish:
           requires:
-            - checkout
+            - checkout_code
           filters:
             branches:
               only: main
