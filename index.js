@@ -19,13 +19,7 @@ module.exports = {
     tsconfigRootDir: __dirname,
     project: ["tsconfig.json"],
   },
-  extends: [
-    "./lib/core.js",
-    "./lib/typescript.js",
-    "./lib/import.js",
-    "plugin:import/typescript",
-    "./lib/format.js",
-  ],
+  extends: ["./lib/core.js", "./lib/import.js", "./lib/format.js"],
   settings: {
     /**
      * Tell import which file extensions to look for
