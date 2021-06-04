@@ -1,8 +1,6 @@
 # @verypossible/eslint-config
 
-Basic eslint config with options for TypeScript and/or React.
-
-**Note: The `web` config is not working with create-react-app -- see [this issue](https://github.com/facebook/create-react-app/issues/8936)**
+Basic eslint config for TypeScript with React (optional).
 
 ## Getting Started
 
@@ -11,38 +9,39 @@ Follow these steps to add this eslint config to your project.
 ### Installation
 
 1. Install packages - `yarn add --dev @verypossible/eslint-config`
-2. Install peer dependencies - `yarn add --dev @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint prettier`
+2. Install peer dependencies
+
+```bash
+yarn add --dev @typescript-eslint/parser @typescript-eslint/plugin eslint eslint-config-prettier eslint-plugin-import eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
+```
+
+If you're using React, be sure to also install those dependencies
+
+```bash
+yarn add --dev eslint-plugin-react eslint-plugin-react-hooks
+```
 
 ### Configuration
 
 Create an `.eslintrc.js` in the root of your project.
 
-This config has 3 setups: node, web, and native. At minimum, this config assumes all projects are using es6 or higher and contain a `package.json` (for file resolution).
+This config can be used with TypeScript, with or without React. At minimum, this config assumes all projects are using es6 or higher and contain a `package.json` (for file resolution).
 
-**Node**
+**TypeScript**
 
 ```js
 // .eslintrc.js
 module.exports = {
-  extends: ["@verypossible/eslint-config/node"],
+  extends: ["@verypossible/eslint-config"],
 };
 ```
 
-**Web (React)**
+**TypeScript w/ React**
 
 ```js
 // .eslintrc.js
 module.exports = {
-  extends: ["@verypossible/eslint-config/web"],
-};
-```
-
-**Native (React Native)**
-
-```js
-// .eslintrc.js
-module.exports = {
-  extends: ["@verypossible/eslint-config/native"],
+  extends: ["@verypossible/eslint-config/react"],
 };
 ```
 
@@ -59,6 +58,10 @@ You can then configure the `lint` script in `package.json`
 ```
 
 You can fix all automatically fixable errors by appending the `--fix` flag to your script: `yarn run lint --fix`.
+
+### Type checking
+
+This config has linting with type information enabled automatically. Note that this requires certain `parserOptions` to be defined -- the defaults for these are set in [index.js](./index.js). [Read more about this configuration](https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md).
 
 ### Extending the config
 
@@ -82,7 +85,7 @@ If you're using absolute path resolution aliasing (ie. instead of `../../foo` yo
 
 ```js
 module.exports = {
-  extends: ["@verypossible/config/[config]"],
+  extends: ["@verypossible/eslint-config"],
   rules: {
     "import/order": [
       "error",
@@ -112,7 +115,7 @@ This config extends these configs and plugins:
 
 There are a few individual rules configured for each, please check the `lib/` folder for more information.
 
-Adding or changing a rule is allowed! Please feel free to [open an issue](https://github.com/verypossible-labs/eslint-config-very/issues) or a [pull request](https://github.com/verypossible-labs/eslint-config-very/pulls)
+Adding or changing a rule is allowed! Please feel free to [open an issue](https://github.com/verypossible-labs/eslint-config-very/issues) or a [pull request](https://github.com/verypossible-labs/eslint-config-very/pulls) to make a case for a rule addition / change.
 
 ## Roadmap
 

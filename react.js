@@ -6,5 +6,5 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ["@react-native-community"],
+  extends: ["./index.js", "./react.js"],
 };
