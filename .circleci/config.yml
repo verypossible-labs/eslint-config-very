@@ -35,8 +35,6 @@ workflows:
   deploy:
     jobs:
       - publish:
-          requires:
-            - checkout_code
           filters:
             branches:
               only: main
