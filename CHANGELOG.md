@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/verypossible-labs/eslint-config-very/compare/v1.2.0...v1.2.1) (2021-06-04)
+
+
+### Bug Fixes
+
+* **core:** update path resolution for tsconfig dir ([24c4a54](https://github.com/verypossible-labs/eslint-config-very/commit/24c4a54fe8be16ddb2826b7fa56f3c5d92eeb445))
+
 # [1.2.0](https://github.com/verypossible-labs/eslint-config-very/compare/v1.1.0...v1.2.0) (2021-06-04)
 
 
