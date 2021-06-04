@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/verypossible-labs/eslint-config-very/compare/v1.2.1...v1.3.0) (2021-06-04)
+
+
+### Features
+
+* **resolution:** add import resolver for typescript aliases ([7ab2a38](https://github.com/verypossible-labs/eslint-config-very/commit/7ab2a388c6bf2c0ef9dd2f9daa7ba7cedfad85ea))
+
 ## [1.2.1](https://github.com/verypossible-labs/eslint-config-very/compare/v1.2.0...v1.2.1) (2021-06-04)
 
 
