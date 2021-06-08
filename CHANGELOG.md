@@ -1,3 +1,15 @@
+# [1.4.0](https://github.com/verypossible-labs/eslint-config-very/compare/v1.3.0...v1.4.0) (2021-06-08)
+
+
+### Bug Fixes
+
+* **prettier:** remove extraneous prettier requirements, since we use all of their defaults ([eab5cda](https://github.com/verypossible-labs/eslint-config-very/commit/eab5cda45c350771598653195221d783f65f7a25))
+
+
+### Features
+
+* **restrict-template-expressions:** allow nullish expressions in templates ([baf2219](https://github.com/verypossible-labs/eslint-config-very/commit/baf2219437acb285c8dab2b9c10f913fcc2acb3b))
+
 # [1.3.0](https://github.com/verypossible-labs/eslint-config-very/compare/v1.2.1...v1.3.0) (2021-06-04)
 
 
