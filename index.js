@@ -15,9 +15,5 @@ module.exports = {
     tsconfigRootDir: process.cwd(), // project root
     project: ["tsconfig.json"],
   },
-  extends: [
-    "./lib/rules/core.js",
-    "./lib/rules/import.js",
-    "./lib/rules/format.js",
-  ],
+  extends: ["./lib/rules/core.js", "./lib/rules/import.js", "prettier"],
 };
