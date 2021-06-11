@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/verypossible-labs/eslint-config-very/compare/v1.4.0...v1.5.0) (2021-06-11)
+
+
+### Features
+
+* **rules:** update typescript-eslint ts-comment rule ([8f7325a](https://github.com/verypossible-labs/eslint-config-very/commit/8f7325a62a5d4a4c4032c40fe5481cef15a2855a))
+
 # [1.4.0](https://github.com/verypossible-labs/eslint-config-very/compare/v1.3.0...v1.4.0) (2021-06-08)
 
 
