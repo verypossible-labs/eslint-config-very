@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/verypossible-labs/eslint-config-very/compare/v1.5.0...v1.5.1) (2021-06-28)
+
+
+### Bug Fixes
+
+* **dependencies:** update and fix dependencies ([f05518e](https://github.com/verypossible-labs/eslint-config-very/commit/f05518e2042e74dcff0f8ec19e8ba6aaf963cea4))
+
 # [1.5.0](https://github.com/verypossible-labs/eslint-config-very/compare/v1.4.0...v1.5.0) (2021-06-11)
 
 
