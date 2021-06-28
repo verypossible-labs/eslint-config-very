@@ -9,22 +9,12 @@ Follow these steps to add this eslint config to your project.
 ### Installation
 
 1. Install packages - `yarn add --dev @verypossible/eslint-config`
-2. Install peer dependencies
+2. Install peer dependencies - `npx install-peerdeps --dev @verypossible/eslint-config`
+
+If you run into any issues with peer dependencies, you can install them manually.
 
 ```bash
-yarn add --dev @typescript-eslint/parser @typescript-eslint/plugin eslint eslint-config-prettier eslint-plugin-import eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
-```
-
-If you're using React, be sure to also install these dependencies:
-
-```bash
-yarn add --dev eslint-plugin-react eslint-plugin-react-hooks
-```
-
-If you want to use aliases for path resolution (see [Module Resolution](#module-resolution)), be sure to also install these dependencies:
-
-```bash
-yarn add --dev eslint-import-resolver-typescript babel-plugin-module-resolver
+yarn add --dev @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier eslint-import-resolver-babel-module eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks prettier
 ```
 
 ### Configuration
@@ -33,19 +23,17 @@ Create an `.eslintrc.js` in the root of your project.
 
 This config can be used with TypeScript, with or without React. At minimum, this config assumes all projects are using es6 or higher and contain a `package.json` (for file resolution).
 
-#### TypeScript
-
 ```js
 // .eslintrc.js
+
+// typescript
 module.exports = {
   extends: ["@verypossible/eslint-config"],
 };
-```
 
-#### TypeScript w/ React
+// OR
 
-```js
-// .eslintrc.js
+// typescript react
 module.exports = {
   extends: ["@verypossible/eslint-config/react"],
 };
@@ -57,7 +45,7 @@ You can then configure the `lint` script in `package.json`
 
 ```json
 "scripts": {
-  "lint": "eslint . --ext .ts,.tsx"
+  "lint": "eslint ." // `.` means everything, you can change it to be a given folder, etc.
 }
 ```
 
@@ -65,9 +53,11 @@ You can fix all automatically fixable errors by adding the `--fix` flag to your 
 
 ```json
 "scripts": {
-  "lint": "eslint --fix . --ext .ts,.tsx"
+  "lint": "eslint --fix ."
 }
 ```
+
+[More about configuring the eslint cli](https://eslint.org/docs/user-guide/command-line-interface).
 
 ### Type checking
 
@@ -110,6 +100,36 @@ module.exports = {
     ],
   },
 };
+```
+
+Be sure to enable it in your `tsconfig.json` as well:
+
+```json
+{
+  // ...rest of your tsconfig.json
+  "baseURL": ".", // root, could be any glob
+  "paths": {
+    "~/*": ["src/**"] // whatever your alias is (~) and wherever it resolves to (src)
+  }
+}
+```
+
+**If you are using React Native** you will also need to enable module resolution inside the `plugins` array of your `babel.config.js`:
+
+```js
+// ...rest of the config
+plugins: [
+  // ...any other plugins you have
+  [
+    "module-resolver",
+    {
+      root: ["./"], // root, could be any glob
+      alias: {
+        "~": "./src", // whatever your alias is (~) and wherever it resolves to (src)
+      },
+    },
+  ],
+];
 ```
 
 ## Development
