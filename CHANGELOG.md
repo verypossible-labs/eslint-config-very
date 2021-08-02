@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/verypossible-labs/eslint-config-very/compare/v1.5.1...v1.6.0) (2021-08-02)
+
+
+### Features
+
+* **promises:** add ignoreVoid and ignoreIIFE option exceptions to no-floating-promises rule ([17f079b](https://github.com/verypossible-labs/eslint-config-very/commit/17f079b2388611b0ccfbc2ed8cbe084ed4565eea))
+
 ## [1.5.1](https://github.com/verypossible-labs/eslint-config-very/compare/v1.5.0...v1.5.1) (2021-06-28)
 
 
