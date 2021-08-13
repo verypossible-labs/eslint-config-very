@@ -14,7 +14,7 @@ Follow these steps to add this eslint config to your project.
 If you run into any issues with peer dependencies, you can install them manually.
 
 ```bash
-yarn add --dev @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier eslint-import-resolver-babel-module eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks prettier
+yarn add --dev @typescript-eslint/eslint-plugin @typescript-eslint/parser babel-plugin-module-resolver eslint eslint-config-prettier eslint-import-resolver-babel-module eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks prettier
 ```
 
 ### Configuration
