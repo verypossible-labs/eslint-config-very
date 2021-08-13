@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/verypossible-labs/eslint-config-very/compare/v1.6.0...v1.6.1) (2021-08-13)
+
+
+### Bug Fixes
+
+* **pkg:** add missing babel-plugin-module-resolver ([a6f2f38](https://github.com/verypossible-labs/eslint-config-very/commit/a6f2f38a6d49194aec98455b831d6654ed13c4e1))
+
 # [1.6.0](https://github.com/verypossible-labs/eslint-config-very/compare/v1.5.1...v1.6.0) (2021-08-02)
 
 
