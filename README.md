@@ -61,7 +61,9 @@ You can fix all automatically fixable errors by adding the `--fix` flag to your 
 
 ### Type checking
 
-This config has linting with type information enabled automatically. Note that this requires certain `parserOptions` to be defined -- the defaults for these are set in [index.js](./index.js). [Read more about this configuration](https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md).
+This config has linting with type information enabled automatically. Note that this requires certain `parserOptions` to be defined -- the defaults for these are set in [index.js](./index.js).
+
+[Read more about this configuration here](https://github.com/typescript-eslint/typescript-eslint/blob/main/docs/linting/TYPED_LINTING.md).
 
 ### Extending the config
 
