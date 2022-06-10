@@ -61,7 +61,7 @@
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^6.0.0",
     "pinst": "^2.1.6",
-    "semantic-release": "^17.4.3"
+    "semantic-release": "^19.0.3"
   },
   "config": {
     "commitizen": {
